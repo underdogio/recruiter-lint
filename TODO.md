@@ -14,3 +14,4 @@
 * Links - i.e. to a job desc
 * 'A client of ours' - you don't actually say who it is!
 * Hyperbole - 'Our company is scaling exceptionally fast and will soon become the greatest source of behavioral finance data on the web! '
+* LinkedIn

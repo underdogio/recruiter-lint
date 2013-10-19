@@ -14,8 +14,8 @@ module RecruiterLint
 	    	swear_mentions = spec.contains?(swears)
 
 	    	if swear_mentions.any?
-	    		result.add_warning "Swearing in a job spec isn't very professional", swear_mentions
-	    		result.add_recruiter_fail_points swear_mentions.length
+        	result.add_warning "Swearing in a job spec isn't very professional", swear_mentions
+        	result.add_recruiter_fail_points swear_mentions.length
 	    	end
 	    end
     end

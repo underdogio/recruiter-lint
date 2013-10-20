@@ -8,7 +8,9 @@ module RecruiterLint
         informal_words = [
           /want(ed)? to check in/,
           /r\.e\./i,
-          /just sent you/
+          /just sent you/,
+          /How are you/,
+          /Hope all is well/
         ]
 
         informal_mentions = spec.contains?(informal_words)

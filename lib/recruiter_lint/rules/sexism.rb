@@ -26,26 +26,6 @@ module RecruiterLint
         end
       end
 
-      class GenderedPronouns < Rule
-        name "Gendered Pronouns"
-        desc "Inbalanced use of \"him/his/her\" or \"he/she\" could indicate that you're " +
-              "discriminating against a certain gender. Revise your use of these words to be " +
-              "sure, or replace them with \"them\" or \"they\"."
-
-        def test(spec, result)
-          female_gendered_pronouns = ["she", "her"]
-          male_gendered_pronouns = ["he", "his", "him"]
-
-          female_mentions = spec.contains?(female_gendered_pronouns)
-          maleMentions    = spec.contains?(male_gendered_pronouns)
-          allMentions     = female_mentions + maleMentions
-
-          if female_mentions.length != maleMentions.length
-            result.add_warning "Gendered pronouns are used and mismatched: " + allMentions.join(", "), allMentions
-          end
-        end
-      end
-
       class SexualizedTerms < Rule
         name "Sexualized Terms"
         desc "Terms like \"sexy code\" are often used if the person writing a spec doesn't know " +

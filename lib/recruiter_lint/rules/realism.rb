@@ -11,7 +11,8 @@ module RecruiterLint
           /blue\s*sk(?:y|ies)/, /enlighten(?:ed|ing)?/,
           /green\s*fields?/, /incentivi[sz]e/, "paradigm",
           /producti[sz]e/, /reach(?:ed|ing) out/, /synerg(?:y|ize|ise)/,
-          /visionar(?:y|ies)/, /exceptionally/, /greatest/, /rapidly/, /opportunity/
+          /visionar(?:y|ies)/, /exceptionally/, /greatest/, /rapidly/,
+          /opportunity/, /spectacular/, /millions?/, /the best/
         ]
 
         visionary_mentions = spec.contains?(visionary_words)

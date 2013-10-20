@@ -3,7 +3,7 @@ module RecruiterLint
     module Sexism
       class GenderMention < Rule
         name "Gender Mention"
-        desc "Mentioning gender in a job spec not only limits the number of people likely to " +
+        desc "Mentioning gender in a recruiting email not only limits the number of people likely to " +
               "be interested, but can also have legal implications – it is often discriminatory. " +
               "Check your use of gender-specific terms."
 

@@ -28,3 +28,7 @@ module RecruiterLint
     end
   end
 end
+
+Dir[File.dirname(__FILE__) + '/rules/*.rb'].sort.each do |path|
+  require path
+end

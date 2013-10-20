@@ -11,17 +11,17 @@ module RecruiterLint
           /blue\s*sk(?:y|ies)/, /enlighten(?:ed|ing)?/,
           /green\s*fields?/, /incentivi[sz]e/, "paradigm",
           /producti[sz]e/, /reach(?:ed|ing) out/, /synerg(?:y|ize|ise)/,
-          /visionar(?:y|ies)/
+          /visionar(?:y|ies)/, /exceptionally/, /greatest/, /rapidly/, /opportunity/
         ]
 
-        visionary_mentions = spec.containsAnyOf(visionary_words)
+        visionary_mentions = spec.contains?(visionary_words)
 
         amount = visionary_mentions.length > 2 ? "Lots of" : "Some"
 
         if visionary_mentions.any?
           result.add_warning "#{amount} \"visionary\" terminology is used", visionary_mentions
-          result.add_culture_fail_points visionary_mentions.length / 2
-          result.add_realism_fail_points visionary_mentions.length / 2
+          result.add_culture_fail_points visionary_mentions.length / 2.0
+          result.add_realism_fail_points visionary_mentions.length / 2.0
         end
       end
     end

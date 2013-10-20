@@ -22,14 +22,14 @@ module RecruiterLint
       }
     end
 
-    def add_warning(msg, evidence)
+    def add_warning(msg, evidence = [])
       warnings << {
         message:  msg,
         evidence: evidence
       }
     end
 
-    def add_notice(msg, evidence)
+    def add_notice(msg, evidence = [])
       notices << {
         message:  msg,
         evidence: evidence
@@ -37,7 +37,7 @@ module RecruiterLint
     end
 
     def add_fail_points(type, amount)
-      failPoints[type] += amount || 1
+      fail_points[type] += amount || 1
     end
 
     def add_culture_fail_points(amount)
@@ -54,6 +54,19 @@ module RecruiterLint
 
     def add_tech_fail_points(amount)
       add_fail_points :tech, amount
+    end
+
+    def as_json(options = nil)
+      {
+        errors: errors,
+        warnings: warnings,
+        notices: notices,
+        fail_points: fail_points
+      }
+    end
+
+    def to_json(options = nil)
+      as_json(options).to_json
     end
   end
 end

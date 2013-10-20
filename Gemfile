@@ -18,3 +18,7 @@ gem 'json', '~> 1.7.7'
 
 gem 'dalli'
 gem 'memcachier'
+
+group :development do
+  gem 'debugger'
+end

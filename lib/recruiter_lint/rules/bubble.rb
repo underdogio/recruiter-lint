@@ -16,7 +16,7 @@ module RecruiterLint
 
         if bubble_job_mentions.any?
           result.add_warning "Tech people are not ninjas, rock stars, gurus or superstars", bubble_job_mentions
-          result.add_culture_fail_points bubble_job_mentions.length / 2
+          result.add_culture_fail_points bubble_job_mentions.length / 2.0
           result.add_realism_fail_points 1
         end
       end

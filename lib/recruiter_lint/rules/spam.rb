@@ -4,7 +4,7 @@ module RecruiterLint
       name "Newsletter"
       desc "Don't spam candidates with canned emails"
 
-      def test(spec, result)
+      def run(spec, result)
         canned_words = [
           /unsubscribe/i,
         ]

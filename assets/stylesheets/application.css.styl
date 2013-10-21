@@ -9,11 +9,18 @@ body {
   margin: 0
   padding: 0
   height: 100%
-  background-color: #fff
+  background-color: #333643
   font-family: 'Open Sans',sans-serif
   font-size: 14px
   line-height: 20px
-  color: #333
+  color: #E5E6EC
+}
+
+a {
+  color: inherit
+  cursor pointer
+  text-decoration: none
+  font-weight: 600
 }
 
 h1 {
@@ -27,7 +34,7 @@ h2 {
   margin: 0
   padding: 0
   font-size: 18px
-  font-weight: 800
+  font-weight: 200
 }
 
 h1, h2, div, header, article, section {
@@ -38,10 +45,25 @@ header {
   height: 50px
   line-height: 50px
   padding: 0 15px
+  background: #242A31
+
+  h1 {
+    float: left
+  }
+
+  .loading {
+    float: right
+    opacity: 0
+    transition: opacity 200ms
+
+    &.active {
+      opacity: 1
+    }
+  }
 }
 
 article {
-  top: 40px
+  top: 50px
   left: 0
   right: 0
   bottom: 0
@@ -53,19 +75,65 @@ article {
     position: absolute
     left: 0px
     top: 0px
-    right: 200px
+    right: 400px
     bottom: 0px
     outline: none
     padding: 7px 8px
     resize: none
+    border: none
+    border-radius: 2px
+    background: rgba(255, 255, 255, .2)
+    color: #E5E6EC
+    font-size: 15px
+
+    &::-webkit-input-placeholder {
+      color: #E5E6EC
+    }
+
+    &::-moz-input-placeholder {
+      color: #E5E6EC
+    }
   }
 
   section {
-    padding: 15px
     position: absolute
-    top: 0px
-    right: 0px
-    bottom: 0px
-    width: 200px
+    top: 15px
+    right: 15px
+    bottom: 15px
+    width: 400px
+    background: #FFF
+    color: #606E75
+    border-radius: 0 3px 3px 0
+    overflow: hidden
+
+    p {
+      margin: 20px 0px
+      padding: 0 15px
+      line-height: 20px
+    }
+
+    h2 {
+      padding: 10px 12px
+      background: #9260BC
+      color: #FFF
+    }
+
+    ul {
+      margin: 20px 0px
+      padding: 0 35px
+    }
+
+    li {
+      line-height: 20px
+    }
+
+    ul.index {
+      padding: 0 15px
+      list-style: none
+    }
+
+    h2 a.clear {
+      float: right
+    }
   }
 }

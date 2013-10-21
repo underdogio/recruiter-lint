@@ -5,7 +5,7 @@ module RecruiterLint
       desc "While swearing in the workplace can be OK, you shouldn't be using profanity in a " +
       "recruiting email – it's unprofessional."
 
-      def test(spec, result)
+      def run(spec, result)
         swears = [
           "bloody", "bugger", "cunt", "shit",
           /fuck(?:er|ing)?/, /piss(?:ing)?/

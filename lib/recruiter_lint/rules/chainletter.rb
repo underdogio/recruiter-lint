@@ -4,7 +4,7 @@ module RecruiterLint
       name "ChainLetter"
       desc "Asking candidates to spam their friends with your emails is a bad idea."
 
-      def test(spec, result)
+      def run(spec, result)
         chain_words = ['not interested', 'friends', 'share with', 'mass email', 'pass on']
 
         chain_mentions = spec.contains?(chain_words)

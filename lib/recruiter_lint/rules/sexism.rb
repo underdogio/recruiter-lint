@@ -7,7 +7,7 @@ module RecruiterLint
               "be interested, but can also have legal implications – it is often discriminatory. " +
               "Check your use of gender-specific terms."
 
-        def test(spec, result)
+        def run(spec, result)
           gender_words = [
             /boys?/, /bros?/, /chicks?/, /dads?/, /dudes?/,
             /fathers?/, /females?/, /gentlem[ae]n/, /girls?/,
@@ -32,7 +32,7 @@ module RecruiterLint
               "what they are talking about or can't articulate what good code is. It can also " +
               "be an indicator of bro culture."
 
-        def test(spec, result)
+        def run(spec, result)
           sexualized_words = ["sexy", "hawt", "phat"]
 
           sexualized_mentions = spec.contains?(sexualized_words)

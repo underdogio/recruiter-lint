@@ -6,7 +6,7 @@ module RecruiterLint
             "person (perhaps a CEO or stakeholder) has been involved in writing the spec. Be " +
             "down-to-earth, and explain things in plain English."
 
-      def test(spec, result)
+      def run(spec, result)
         visionary_words = [
           /blue\s*sk(?:y|ies)/, /enlighten(?:ed|ing)?/,
           /green\s*fields?/, /incentivi[sz]e/, "paradigm",

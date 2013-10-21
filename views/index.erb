@@ -12,14 +12,44 @@
 <body>
   <header>
     <h1>Recruiter Lint</h1>
+
+    <span class="loading">Loading...</span>
   </header>
 
   <article>
-    <textarea placeholder="Paste a recruitment email here"></textarea>
+    <textarea placeholder="Hi Alex, ..." autofocus></textarea>
 
-    <section class="results">
+    <section class="info">
+      <h2>How it works</h2>
 
+      <p>
+        We parse tech recruitment emails through a number of
+        different rules and try to provide feedback in order to improve them.
+      </p>
+
+      <p>
+        You can see the rules we use, and create pull requests to improve them, in the
+         <a href="https://github.com/maccman/recruiter-lint">GitHub project</a>.
+      </p>
+
+      <p>Just paste a recruitment email on the left, and we'll start analyzing it.</p>
+
+      <h2>Examples</h2>
+
+      <p>
+        The following are all real (anonamized) examples of recruiting emails the authors received.
+      </p>
+
+      <ul class="examples index">
+        <li><a data-name="example1">Example 1: <em>"resonate well"</em></a></li>
+        <li><a data-name="example2">Example 2: <em>"spam friends"</em></a></li>
+        <li><a data-name="example3">Example 3: <em>"send me your CV"</em></a></li>
+        <li><a data-name="example4">Example 4: <em>"a client of ours"</em></a></li>
+        <li><a data-name="example5">Example 5: <em>"RoR Ninjas!"</em></a></li>
+      </ul>
     </section>
+
+    <section class="results"></section>
   </article>
 </body>
 </html>

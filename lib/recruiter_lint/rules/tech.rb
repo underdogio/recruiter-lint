@@ -7,7 +7,7 @@ module RecruiterLint
               "Sometimes we can't avoid this, but extreme legacy tech can often indicate that " +
               "a company isn't willing to move forwards or invest in career development."
 
-        def test(spec, result)
+        def run(spec, result)
           legacy_tech_m = [
             "cobol", "cvs", /front\s*page/, "sourcesafe",
             /vb\s*6/, /visual\s*basic\s*6/, "vbscript", "svn"
@@ -27,7 +27,7 @@ module RecruiterLint
         name "JavaScript"
         desc "JavaScript is one word. You write JavaScript, not javascripts or java script."
 
-        def test(spec, result)
+        def run(spec, result)
           javascript_fails = spec.contains?(/(java script|java\s*scripts|javascript)/)
 
           if javascript_fails.any?
@@ -41,7 +41,7 @@ module RecruiterLint
         name "Ruby On Rail"
         desc "Ruby On Rails is plural – there is more than one rail."
 
-        def test(spec, result)
+        def run(spec, result)
           rails_fails = spec.contains?("ruby on rail")
 
           if rails_fails.any?

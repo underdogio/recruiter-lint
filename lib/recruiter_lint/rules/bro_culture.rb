@@ -6,7 +6,7 @@ module RecruiterLint
             "interest, both male and female. It discriminates against anyone who doesn't fit " +
             "into a single gender-specific archetype."
 
-      def test(spec, result)
+      def run(spec, result)
         bro_words    = [/bros?/, "crank", "crush", /dude(?:bro)?s?/, "skillz"]
         bro_mentions = spec.contains?(bro_words)
         amount       = bro_mentions.length > 2 ? "Lots of" : "Some"

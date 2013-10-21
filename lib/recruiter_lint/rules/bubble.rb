@@ -6,7 +6,7 @@ module RecruiterLint
            "shows a lack of respect and professionalism. It's also rather cliched and can be " +
            "an immediate turn-off to many people."
 
-      def test(spec, result)
+      def run(spec, result)
         bubble_job_titles = [
           /gurus?/, /hero(:?es)/, /ninjas?/,
           /rock\s*stars?/, /super\s*stars?/

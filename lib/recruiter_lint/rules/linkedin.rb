@@ -4,7 +4,7 @@ module RecruiterLint
       name "LinkedIn"
       desc "The vast majority of softare engineers don't want to use LinkedIn."
 
-      def test(spec, result)
+      def run(spec, result)
         deprecated_words = ['LinkedIn']
 
         deprecated_mentions = spec.contains?(deprecated_words)

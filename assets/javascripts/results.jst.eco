@@ -1,7 +1,17 @@
-<h2>Results</h2>
+<h2>Results <a class="clear">(clear)</a></h2>
+
+<ul class="points index">
+  <li>Recruiter fail points: <strong><%= @fail_points.recruiter %></strong></li>
+  <li>Culture fail points: <strong><%= @fail_points.culture %></strong></li>
+  <li>Realism fail points: <strong><%= @fail_points.realism %></strong></li>
+  <li>Tech fail points: <strong><%= @fail_points.tech %></strong></li>
+  <li>Overall: <strong><%= @score %>/10</strong></li>
+</ul>
+
+<h2>Warnings</h2>
 
 <ul>
 <% for warning in @warnings: %>
-  <li><%= warning.message %></li>
+  <li><%= warning.message %>.</li>
 <% end %>
 </ul>

@@ -15,24 +15,37 @@ module RecruiterLint
       }
     end
 
+    def context(type = nil)
+      if block_given?
+        @context = type
+        yield
+        @context = nil
+      else
+        @context
+      end
+    end
+
     def add_error(msg, evidence = [])
       errors << {
         message:  msg,
-        evidence: evidence
+        evidence: evidence,
+        context:  context
       }
     end
 
     def add_warning(msg, evidence = [])
       warnings << {
         message:  msg,
-        evidence: evidence
+        evidence: evidence,
+        context:  context
       }
     end
 
     def add_notice(msg, evidence = [])
       notices << {
         message:  msg,
-        evidence: evidence
+        evidence: evidence,
+        context:  context
       }
     end
 
@@ -56,12 +69,17 @@ module RecruiterLint
       add_fail_points :tech, amount
     end
 
+    def score
+      10 - [fail_points.values.reduce(:+), 10].min
+    end
+
     def as_json(options = nil)
       {
         errors: errors,
         warnings: warnings,
         notices: notices,
-        fail_points: fail_points
+        fail_points: fail_points,
+        score: score
       }
     end
 

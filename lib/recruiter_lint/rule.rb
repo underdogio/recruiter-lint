@@ -19,11 +19,25 @@ module RecruiterLint
     end
 
     def self.run(spec, result)
-      self.new.test(spec, result)
+      result.context(self) do
+        self.new.run(spec, result)
+      end
+
       result
     end
 
-    def test(spec, result)
+    def self.as_json(options = nil)
+      {
+        name: name,
+        desc: desc
+      }
+    end
+
+    def self.to_json(options = nil)
+      as_json(options).to_json
+    end
+
+    def run(spec, result)
       raise 'Override me'
     end
   end

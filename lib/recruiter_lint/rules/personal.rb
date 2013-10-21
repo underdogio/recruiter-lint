@@ -4,7 +4,7 @@ module RecruiterLint
       name "Personal"
       desc "Sending canned emails without a name is just rude."
 
-      def test(spec, result)
+      def run(spec, result)
         personal_words = [
           /Hi\b.+/, /Hey\b.+/, /Dear\b.+/, /Evening\b.+/, /Hello\b.+/
         ]

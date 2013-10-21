@@ -4,7 +4,7 @@ module RecruiterLint
       name "Ambiguity"
       desc "It's absolutely crucial you include the name of your company or client in the email."
 
-      def test(spec, result)
+      def run(spec, result)
         deprecated_words = ['client', 'portfolio', 'roles']
 
         deprecated_mentions = spec.contains?(deprecated_words)

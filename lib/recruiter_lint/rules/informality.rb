@@ -4,7 +4,7 @@ module RecruiterLint
       name "Informality"
       desc "Don't be unecessarily informal"
 
-      def test(spec, result)
+      def run(spec, result)
         informal_words = [
           /want(ed)? to check in/,
           /r\.e\./i,

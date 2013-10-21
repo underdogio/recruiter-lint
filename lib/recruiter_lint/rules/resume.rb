@@ -5,7 +5,7 @@ module RecruiterLint
       desc "Asking for programmers resume's or CVs is outdated, and requires work " +
            "on their behalf. Really all your need is a GitHub link, which you should have before emailing"
 
-      def test(spec, result)
+      def run(spec, result)
         deprecated_words = ['CV', /resume/]
 
         deprecated_mentions = spec.contains?(deprecated_words)

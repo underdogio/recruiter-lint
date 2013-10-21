@@ -6,7 +6,7 @@ module RecruiterLint
 
       def test(spec, result)
         personal_words = [
-          /Hi\b.+/, /Hey\b.+/, /Dear\b.+/
+          /Hi\b.+/, /Hey\b.+/, /Dear\b.+/, /Evening\b.+/, /Hello\b.+/
         ]
 
         personal_mentions = spec.contains?(personal_words)

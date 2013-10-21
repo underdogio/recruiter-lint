@@ -5,7 +5,7 @@ module RecruiterLint
       desc "Asking candidates to look external job description shows you haven't put the effort in."
 
       def test(spec, result)
-        job_desc_words = ['job description', /.*bit\.ly.*/]
+        job_desc_words = [/job descriptions?/, /.*bit\.ly.*/, /advert/]
 
         job_desc_mentions = spec.contains?(job_desc_words)
 

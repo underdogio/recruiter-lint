@@ -10,7 +10,10 @@ module RecruiterLint
           /r\.e\./i,
           /just sent you/,
           /How are you/,
-          /Hope all is well/
+          /Hope all is well/,
+          /you'd be perfect for/,
+          /perfectly suited/,
+          /wonderful day/
         ]
 
         informal_mentions = spec.contains?(informal_words)

@@ -47,7 +47,7 @@ class App
     @$info.hide()
     @$results.html(JST['results'](loading: true)).show()
 
-  debounce: (callback, wait = 300) ->
+  debounce: (callback, wait = 500) ->
     timeout = null
 
     (args...) ->

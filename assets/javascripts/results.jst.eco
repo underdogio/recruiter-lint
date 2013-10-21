@@ -4,10 +4,10 @@
   <p class="points">Loading...</p>
 <% else: %>
   <ul class="points index">
-    <li>Recruiter fail points: <strong><%= @fail_points.recruiter %></strong></li>
-    <li>Culture fail points: <strong><%= @fail_points.culture %></strong></li>
-    <li>Realism fail points: <strong><%= @fail_points.realism %></strong></li>
-    <li>Tech fail points: <strong><%= @fail_points.tech %></strong></li>
+    <li>Recruiter issues: <strong><%= @fail_points.recruiter %></strong></li>
+    <li>Culture issues: <strong><%= @fail_points.culture %></strong></li>
+    <li>Realism issues: <strong><%= @fail_points.realism %></strong></li>
+    <li>Tech issues: <strong><%= @fail_points.tech %></strong></li>
     <li>Overall score: <strong><%= @score %>/10</strong></li>
   </ul>
 <% end %>

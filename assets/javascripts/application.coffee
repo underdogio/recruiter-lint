@@ -9,7 +9,6 @@ class App
     @$results  = $('.results').hide()
     @$info     = $('.info')
     @$textarea = $('textarea').on('input', @debounce(@submit))
-    @$loading  = $('.loading')
 
     $('.examples [data-name]').click(@clickExample)
     $('body').on('click', '.clear', @clickClear)
@@ -30,6 +29,7 @@ class App
 
     if text
       @showLoading()
+
       $.post('/lint', text: text)
         .complete(@hideLoading)
         .success(@done)
@@ -43,12 +43,8 @@ class App
     @$results.html(JST['results'](results)).show()
 
   showLoading: =>
-    @$loading.addClass('active')
-
-  hideLoading: =>
-    setTimeout =>
-      @$loading.removeClass('active')
-    , 300
+    @$info.hide()
+    @$results.html(JST['results'](loading: true)).show()
 
   debounce: (callback, wait = 300) ->
     timeout = null

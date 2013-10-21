@@ -8,7 +8,7 @@ class App
   constructor: ->
     @$results  = $('.results').hide()
     @$info     = $('.info')
-    @$textarea = $('textarea').on('input', @debounce(@submit))
+    @$textarea = $('textarea').on('input', @debounce(@render))
 
     $('.examples [data-name]').click(@clickExample)
     $('body').on('click', '.clear', @clickClear)
@@ -18,13 +18,14 @@ class App
 
     name = $(e.currentTarget).data('name')
     @$textarea.val(JST["examples/#{name}"]())
-    @$textarea.trigger('input')
+    @render()
 
   clickClear: (e) =>
     e.preventDefault()
-    @$textarea.val('').trigger('input')
+    @$textarea.val('')
+    @render()
 
-  submit: (e) =>
+  render: =>
     text = @$textarea.val()
 
     if text

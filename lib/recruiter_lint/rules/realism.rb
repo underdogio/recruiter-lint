@@ -12,7 +12,7 @@ module RecruiterLint
           /green\s*fields?/, /incentivi[sz]e/, "paradigm",
           /producti[sz]e/, /reach(?:ed|ing) out/, /synerg(?:y|ize|ise)/,
           /visionar(?:y|ies)/, /exceptionally/, /greatest/, /rapidly/,
-          /opportunity/, /spectacular/, /millions?/,
+          /spectacular/, /millions?/,
           /the best/, /resonate/, /background aligns/,
           /cool/, /hip/
         ]

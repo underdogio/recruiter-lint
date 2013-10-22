@@ -2,7 +2,7 @@ module RecruiterLint
   module Rules
     class LinkedIn < Rule
       name "LinkedIn"
-      desc "The vast majority of softare engineers don't want to use LinkedIn."
+      desc "The vast majority of software engineers don't want to use LinkedIn."
 
       def run(spec, result)
         deprecated_words = ['LinkedIn']

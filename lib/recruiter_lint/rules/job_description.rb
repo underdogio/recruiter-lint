@@ -10,7 +10,7 @@ module RecruiterLint
         job_desc_mentions = spec.contains?(job_desc_words)
 
         if job_desc_mentions.any?
-          result.add_warning "Don't ask candiates to view a separate job description", job_desc_mentions
+          result.add_warning "Don't ask candidates to view a separate job description", job_desc_mentions
           result.add_recruiter_fail_points 1
         end
       end

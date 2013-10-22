@@ -10,7 +10,7 @@ module RecruiterLint
         chain_mentions = spec.contains?(chain_words)
 
         if chain_mentions.any?
-          result.add_warning "Don't ask candiates to forward your emails", chain_mentions
+          result.add_warning "Don't ask candidates to forward your emails", chain_mentions
           result.add_recruiter_fail_points 2
         end
       end

@@ -10,7 +10,7 @@ module RecruiterLint
         deprecated_mentions = spec.contains?(deprecated_words)
 
         if deprecated_mentions.any?
-          result.add_warning "Don't use or mention LinkedIn to candiates", deprecated_mentions
+          result.add_warning "Don't use or mention LinkedIn to candidates", deprecated_mentions
           result.add_recruiter_fail_points 1
         end
       end

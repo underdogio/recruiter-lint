@@ -17,15 +17,35 @@
 <% if @loading: %>
   <p>Loading...</p>
 <% else: %>
-  <ul class="warnings">
-  <% for warning in @warnings: %>
-    <li>
-      <%= warning.message %>
+  <ul>
+    <% for error in @errors: %>
+      <li class="error">
+        <%= error.message %>
 
-      <% if warning.evidence.length: %>
-        (<em><%= warning.evidence.join(', ') %></em>)
-      <% end %>
-    </li>
-  <% end %>
+        <% if error.evidence.length: %>
+          (<em><%= error.evidence.join(', ') %></em>)
+        <% end %>
+      </li>
+    <% end %>
+
+    <% for warning in @warnings: %>
+      <li class="warning">
+        <%= warning.message %>
+
+        <% if warning.evidence.length: %>
+          (<em><%= warning.evidence.join(', ') %></em>)
+        <% end %>
+      </li>
+    <% end %>
+
+    <% for notice in @notices: %>
+      <li class="notice">
+        <%= notice.message %>
+
+        <% if notice.evidence.length: %>
+          (<em><%= notice.evidence.join(', ') %></em>)
+        <% end %>
+      </li>
+    <% end %>
   </ul>
 <% end %>

@@ -38,7 +38,7 @@ module RecruiterLint
       end
 
       class RubyOnRails < Rule
-        name "Ruby On Rail"
+        name "Ruby On Rails"
         desc "Ruby On Rails is plural – there is more than one rail."
 
         def run(spec, result)

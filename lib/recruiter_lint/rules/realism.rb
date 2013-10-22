@@ -15,7 +15,7 @@ module RecruiterLint
           'exceptionally', 'greatest', 'rapidly',
           'spectacular', 'millions?',
           'the best', 'resonate', 'background aligns',
-          'cool', 'hip'
+          'cool', 'hip', 'game-changing', 'game changing'
         ]
 
         visionary_mentions = spec.contains?(visionary_words)

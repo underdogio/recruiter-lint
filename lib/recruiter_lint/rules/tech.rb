@@ -9,8 +9,8 @@ module RecruiterLint
 
         def run(spec, result)
           legacy_tech_m = [
-            "cobol", "cvs", /front\s*page/, "sourcesafe",
-            /vb\s*6/, /visual\s*basic\s*6/, "vbscript", "svn"
+            "cobol", "cvs", /front\s*page/i, "sourcesafe",
+            /vb\s*6/i, /visual\s*basic\s*6/i, "vbscript", "svn"
           ]
 
           legacy_tech_mentions = spec.contains?(legacy_tech_m)

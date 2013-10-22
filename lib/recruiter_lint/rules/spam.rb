@@ -6,7 +6,7 @@ module RecruiterLint
 
       def run(spec, result)
         canned_words = [
-          /unsubscribe/i,
+          'unsubscribe',
         ]
 
         canned_mentions = spec.contains?(canned_words)

@@ -9,12 +9,12 @@ module RecruiterLint
 
         def run(spec, result)
           gender_words = [
-            /boys?/, /bros?/, /chicks?/, /dads?/, /dudes?/,
-            /fathers?/, /females?/, /gentlem[ae]n/, /girls?/,
-            /grandfathers?/, /grandmas?/, /grandmothers?/, /grandpas?/,
-            /grann(?:y|ies)/, /guys?/, /husbands?/, /lad(?:y|ies)/, /m[ae]n/,
-            /m[ou]ms?/, /males?/, /momm(?:y|ies)/, /mommas?/, /mothers?/, /papas?/,
-            /wi(?:fe|ves)/, /wom[ae]n/
+            /boys?/i, /bros?/i, /chicks?/i, /dads?/i, /dudes?/i,
+            /fathers?/i, /females?/i, /gentlem[ae]n/i, /girls?/i,
+            /grandfathers?/i, /grandmas?/i, /grandmothers?/i, /grandpas?/i,
+            /grann(?:y|ies)/i, /guys?/i, /husbands?/i, /lad(?:y|ies)/i, /m[ae]n/i,
+            /m[ou]ms?/i, /males?/i, /momm(?:y|ies)/i, /mommas?/i, /mothers?/i, /papas?/i,
+            /wi(?:fe|ves)/i, /wom[ae]n/i
           ]
 
           gender_mentions = spec.contains?(gender_words)

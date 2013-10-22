@@ -6,7 +6,7 @@ module RecruiterLint
            "on their behalf. Really all your need is a GitHub link, which you should have before emailing"
 
       def run(spec, result)
-        deprecated_words = ['CV', /resume/]
+        deprecated_words = ['CV', 'resume']
 
         deprecated_mentions = spec.contains?(deprecated_words)
 

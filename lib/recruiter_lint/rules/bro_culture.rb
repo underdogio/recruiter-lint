@@ -7,7 +7,7 @@ module RecruiterLint
             "into a single gender-specific archetype."
 
       def run(spec, result)
-        bro_words    = [/bros?/, "crank", "crush", /dude(?:bro)?s?/, "skillz"]
+        bro_words    = [/bros?/i, "crank", "crush", /dude(?:bro)?s?/i, "skillz"]
         bro_mentions = spec.contains?(bro_words)
         amount       = bro_mentions.length > 2 ? "Lots of" : "Some"
 

@@ -8,13 +8,14 @@ module RecruiterLint
 
       def run(spec, result)
         visionary_words = [
-          /blue\s*sk(?:y|ies)/, /enlighten(?:ed|ing)?/,
-          /green\s*fields?/, /incentivi[sz]e/, "paradigm",
-          /producti[sz]e/, /reach(?:ed|ing) out/, /synerg(?:y|ize|ise)/,
-          /visionar(?:y|ies)/, /exceptionally/, /greatest/, /rapidly/,
-          /spectacular/, /millions?/,
-          /the best/, /resonate/, /background aligns/,
-          /cool/, /hip/
+          /blue\s*sk(?:y|ies)/i, /enlighten(?:ed|ing)?/i,
+          /green\s*fields?/i, /incentivi[sz]e/i, "paradigm",
+          /producti[sz]e/i, /reach(?:ed|ing) out/i, /synerg(?:y|ize|ise)/i,
+          /visionar(?:y|ies)/i,
+          'exceptionally', 'greatest', 'rapidly',
+          'spectacular', 'millions?',
+          'the best', 'resonate', 'background aligns',
+          'cool', 'hip'
         ]
 
         visionary_mentions = spec.contains?(visionary_words)

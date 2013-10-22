@@ -8,8 +8,8 @@ module RecruiterLint
 
       def run(spec, result)
         bubble_job_titles = [
-          /gurus?/, /hero(:?es)/, /ninjas?/,
-          /rock\s*stars?/, /super\s*stars?/
+          /gurus?/i, /hero(:?es)/i, /ninjas?/i,
+          /rock\s*stars?/i, /super\s*stars?/i
         ]
 
         bubble_job_mentions = spec.contains?(bubble_job_titles)

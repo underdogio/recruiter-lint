@@ -6,15 +6,15 @@ module RecruiterLint
 
       def run(spec, result)
         informal_words = [
-          /want(ed)? to check in/,
+          /want(ed)? to check in/i,
           /r\.e\./i,
-          /just sent you/,
-          /How are you/,
-          /Hope all is well/,
-          /you'd be perfect for/,
-          /perfectly suited/,
-          /wonderful day/,
-          /get in touch/
+          'just sent you',
+          'How are you',
+          'Hope all is well',
+          'you\'d be perfect for',
+          'perfectly suited',
+          'wonderful day',
+          'get in touch'
         ]
 
         informal_mentions = spec.contains?(informal_words)

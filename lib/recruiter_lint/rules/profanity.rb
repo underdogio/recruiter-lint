@@ -7,8 +7,8 @@ module RecruiterLint
 
       def run(spec, result)
         swears = [
-          "bloody", "bugger", "cunt", "shit",
-          /fuck(?:er|ing)?/i, /piss(?:ing)?/i
+          "bloody", "bugger", "cunt", "shit", "damn", "ass", "crap",
+          /fuck(?:er|ing)?/i, /piss(?:ing)?/i, /bitch(?:es|ing)?/i
         ]
 
         swear_mentions = spec.contains?(swears)

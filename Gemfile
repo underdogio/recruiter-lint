@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.3.1'
 
 gem 'sinatra', :require => 'sinatra/base'
 gem 'erubis'
@@ -14,11 +14,7 @@ gem 'coffee-script'
 gem 'stylus'
 gem 'stylus-source', '0.31.0'
 gem 'eco'
-gem 'json', '~> 1.7.7'
+gem 'json', '~> 1.8.3'
 
 gem 'dalli'
 gem 'memcachier'
-
-group :development do
-  gem 'debugger'
-end

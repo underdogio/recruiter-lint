@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - memcached
+    environment:
+      MEMCACHE_SERVERS: memcached:11211
+      # DEV: Use `production` to ensure we are using node/java/memcached
+      RACK_ENV: production
+  memcached:
+    image: memcached:1.4.33-alpine
